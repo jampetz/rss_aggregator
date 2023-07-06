@@ -37,6 +37,8 @@ func main() {
 
 	v1Router.Get("/health", handlerReadiness)
 
+	v1Router.Get("/err", handlerErr)
+
 	router.Mount("/v1", v1Router)
 
 	srv := &http.Server{
